@@ -1,23 +1,14 @@
 require('../spec.helper')
 
 describe('Rock Paper Scissor basic logic', () => {
-    let rock
-    let paper
-    let scissor
+    const rock = 0
+    const paper = 1
+    const scissor = 2
 
-    beforeEach(() => {
-        if (rock > paper) {
-            paper = "victory"
-        } else if (rock > scissor) {
-            rock = "victory"
-        } else if (scissor > paper) {
-            scissor = "victory" 
-        }
-    });
 
     it('rock beats scissor', () => {
-        rock > scissor
-        expect(rock).to.eq ("victory")
+        Game(rock, scissor)
+        expect().to.be("Rock wins")
     })
 })
 

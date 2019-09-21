@@ -23,7 +23,8 @@ Install packages through `$ npm install cucumber chai puppeteer superstatic --sa
 Install e2e_training_wheels through [automatic install](https://www.npmjs.com/package/e2e_training_wheels), when you run `$ npm run test` all test should go green. 
 Make sure you install the most recent babel-loader `$ npm install --save-dev babel-loader@^7`
 
-## Inspiration
+## Inspired by the following sources:
+For [rock-paper-scissor logic](https://stackoverflow.com/questions/11377117/rock-paper-scissors-determine-win-loss-tie-using-math)
 
 ## License
 MIT-license
