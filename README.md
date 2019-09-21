@@ -2,6 +2,11 @@
 
 ## What the code does
 The code is supposed to deliver a web-based application where you can play rock-paper-scissors against a computer. Where the computer randomizes it's output. 
+Main principles of the game:
+Rock vs Paper -> Paper wins
+Rock vs Scissors -> Rock wins
+Paper vs Scissor -> Scissor wins
+
 
 ## Dependencies
 - JavaScript

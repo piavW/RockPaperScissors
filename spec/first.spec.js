@@ -1,18 +1,26 @@
 require('../spec.helper')
 
-describe('Your test case description', () => {
-    // Setup
-    let array
+describe('Rock Paper Scissor basic logic', () => {
+    let rock
+    let paper
+    let scissor
 
     beforeEach(() => {
-        // assign values to your variables
-        array = new Array(2, 3)
+        if (rock > paper) {
+            paper = "victory"
+        } else if (rock > scissor) {
+            rock = "victory"
+        } else if (scissor > paper) {
+            scissor = "victory" 
+        }
     });
 
-    it('add a descriptive test title', () => {
-        // Execute code if needed
-        const sum = array[0] + array[1]
-        // add an assertion using the `expect` keyword
-        expect(sum).to.eql(5)
+    it('rock beats scissor', () => {
+        rock > scissor
+        expect(rock).to.eq ("victory")
     })
 })
+
+//Rock vs Paper -> Paper wins
+//Rock vs Scissors -> Rock wins
+//Paper vs Scissor -> Scissor wins
