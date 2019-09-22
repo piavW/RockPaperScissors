@@ -40,8 +40,8 @@ function Game() {
     let ComputerChoice = () => {
         const computerOptions = [rock, paper, scissor]
         let randomIndex = Math.floor(Math.random()*3);
-        let randomChoice = computerOptions[randomIndex]
-        return `Computer choice is ${randomChoice}`
+        let computerChoice = computerOptions[randomIndex]
+        return computerChoice
     }
 }
 //Rock vs Paper -> Paper wins

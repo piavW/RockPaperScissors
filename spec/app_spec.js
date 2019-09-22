@@ -3,7 +3,6 @@ require('../spec.helper')
 describe('Rock Paper Scissor basic logic', () => {
     let game = new Game
 
-
     it('paper beats rock', () => {
         expect(game.check(1, 0)).to.eq("Paper wins")
     })
@@ -23,13 +22,7 @@ describe('Rock Paper Scissor basic logic', () => {
             const scissor = 2;
             const computerOptions = [rock, paper, scissor];
                 let randomIndex = Math.floor(Math.random()*3);
-                let randomChoice = computerOptions[randomIndex];
-                
-
-            it('computer can choose at random from an array', () => {
-                let computerChoice = randomChoice()
-                expect(computerChoice).to.eq(randomChoice())
-            })
+                let computerChoice = computerOptions[randomIndex];
 
             it('computer can choose rock', () => {
                 let computerChoice = computerOptions[0]
@@ -42,5 +35,26 @@ describe('Rock Paper Scissor basic logic', () => {
                 expect(game.check(computerChoice, playerChoice)).to.eq("Paper wins")
             })  
         })
-    
+    //WIP from here and below - - - - - - - - - - - - - - - - - - - - - - - - -
+            describe('computer can choose on random', () => {
+            let ComputerChoice = () => {
+                const computerOptions = [rock, paper, scissor]
+                let randomIndex = Math.floor(Math.random()*3);
+                let computerChoice = computerOptions[randomIndex]
+                return computerChoice
+            }
+
+            it('computer can choose at random from an array', () => {
+                let computerChoice = new ComputerChoice()
+                expect(computerChoice).to.eq(rock)
+            }) 
+            it('computer can choose at random from an array', () => {
+                const computerChoice = new ComputerChoice
+                expect(computerChoice).to.eq(paper)
+            }) 
+            it('computer can choose at random from an array', () => {
+                var computerChoice = new ComputerChoice
+                expect(computerChoice).to.eq(scissor)
+            }) 
+        })
 })
