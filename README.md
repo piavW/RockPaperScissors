@@ -28,3 +28,25 @@ For [rock-paper-scissor logic](https://stackoverflow.com/questions/11377117/rock
 
 ## License
 MIT-license
+
+# User Stories
+```
+As a user
+I want to be able to visit a website
+To play a game of Rock, Paper, Scissor
+```
+```
+As a user
+I want to be able to click a button
+To select rock, paper or scissor
+```
+```
+As a user
+When I've made my choice
+I want to be able to see the computers choice
+```
+```
+As a user
+When I've chosen rock, paper or scissor
+I want to be able to see if I've won or not
+```
