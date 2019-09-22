@@ -18,19 +18,29 @@ describe('Rock Paper Scissor basic logic', () => {
     })
 
         describe('Computer enters the game', () => {      
-            
+            const rock = 0;
+            const paper = 1;
+            const scissor = 2;
+            const computerOptions = [rock, paper, scissor];
+                let randomIndex = Math.floor(Math.random()*3);
+                let randomChoice = computerOptions[randomIndex];
+                
+
             it('computer can choose at random from an array', () => {
                 let computerChoice = randomChoice()
                 expect(computerChoice).to.eq(randomChoice())
             })
 
             it('computer can choose rock', () => {
-                pending
+                let computerChoice = computerOptions[0]
+                expect(computerChoice).to.eq('rock')
             })
 
-            it('Computer choice and player choice puts into the Game and outcome is an honest result', () => {
-                pending
-            }) 
+            it('Players paper wins when computer choice = rock and player choice = paper', () => {
+                let computerChoice = rock
+                let playerChoice = paper
+                expect(game.check(computerChoice, playerChoice)).to.eq("Paper wins")
+            })  
         })
     
 })

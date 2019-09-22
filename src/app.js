@@ -33,8 +33,16 @@ let ComputerChoice = () => {
     let randomChoice = computerOptions[randomIndex]
     return randomChoice
 }
-
-
+//player choice
+let getPlayerChoice = () => {
+    if (button.addEventListener("click", playerRock)) {
+        let playerChoice = rock
+    } else if (button.addEventListener("click", playerPaper)) {
+        let playerChoice = paper
+    } else if (button.addEventListener("click", Scissor)) {
+       let playerCoice = scissor
+    }
+}
 
 //Rock vs Paper -> Paper wins
 //Rock vs Scissors -> Rock wins
