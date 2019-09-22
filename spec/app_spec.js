@@ -17,7 +17,3 @@ describe('Rock Paper Scissor basic logic', () => {
     })
 
 })
-
-//Rock vs Paper -> Paper wins
-//Rock vs Scissors -> Rock wins
-//Paper vs Scissor -> Scissor wins
