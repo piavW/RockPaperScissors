@@ -33,7 +33,7 @@ describe('Rock Paper Scissor basic logic', () => {
 
             it('computer can choose rock', () => {
                 let computerChoice = computerOptions[0]
-                expect(computerChoice).to.eq('rock')
+                expect(computerChoice).to.eq(rock)
             })
 
             it('Players paper wins when computer choice = rock and player choice = paper', () => {
