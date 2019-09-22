@@ -26,7 +26,7 @@
     "test": "npm run features && npm run specs",
     "features": "superstatic src -p 8080 & mocha --timeout 100000 --recursive  --reporter=spec features ; PORT=8080 npm run stop-test-server",
     "specs": "mocha --recursive  --reporter=spec spec",
-    "server": "superstatic src -p 3000",
+    "server": "superstatic -p 3000",
     "stop-test-server": "lsof -ti tcp:$PORT | xargs kill",
     "cucumber": "superstatic -p 3000 2> /dev/null & cucumber-js; lsof -ti tcp:3000 | xargs kill"
   },
