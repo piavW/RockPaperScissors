@@ -23,6 +23,14 @@ describe('Rock Paper Scissor basic logic', () => {
                 let computerChoice = randomChoice()
                 expect(computerChoice).to.eq(randomChoice())
             })
+
+            it('computer can choose rock', () => {
+                pending
+            })
+
+            it('Computer choice and player choice puts into the Game and outcome is an honest result', () => {
+                pending
+            }) 
         })
     
 })
