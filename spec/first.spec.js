@@ -26,9 +26,16 @@ describe('Rock Paper Scissor basic logic', () => {
         }
     }
 
-    it('rock beats scissor', () => {
+    it('paper beats rock', () => {
         expect(game.check(1, 0)).to.eq("Paper wins")
     })
+    it('rock beats scissor', () => {
+        expect(game.check(0, 2)).to.eq("Rock wins")
+    }) 
+    it('scissor beats paper', () => {
+        expect(game.check(2, 1)).to.eq("Scissor wins")
+    })
+
 })
 
 //Rock vs Paper -> Paper wins
