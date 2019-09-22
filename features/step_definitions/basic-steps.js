@@ -1,4 +1,4 @@
-const { Given, Then, After } = require("cucumber");
+const { Given, Then, When, After } = require("cucumber");
 
 After(async function() {
     return await this.closeHomePage()
@@ -13,5 +13,11 @@ Given("I visit the site", async function() {
     Then("I should see a button {string}", async function(string){
         return await this.pageHasButtonContent(string)
     });
+    When("I click a button {string}", function(string) {
+        pending
+    })
+    Then("I should have the result {string}", function(string) {
+        pending
+    })
 
   
