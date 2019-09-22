@@ -1,3 +1,7 @@
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Game;
+}
+
 function Game() {
     this.check = (par1, par2) => {
         if (par1 == par2) {
