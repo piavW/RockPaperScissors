@@ -26,6 +26,16 @@ const rock = 0
 const paper = 1
 const scissor = 2
 
+//Computer randomized choice
+let ComputerChoice = () => {
+    const computerOptions = [rock, paper, scissor]
+    let randomIndex = Math.floor(Math.random()*3);
+    let randomChoice = computerOptions[randomIndex]
+    return randomChoice
+}
+
+
+
 //Rock vs Paper -> Paper wins
 //Rock vs Scissors -> Rock wins
 //Paper vs Scissor -> Scissor wins
