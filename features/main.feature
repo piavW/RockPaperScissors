@@ -7,4 +7,6 @@ Feature: Play Rock Paper Scissors
   Scenario: Visiting the website
     Given I visit the site
     Then I should see the title "Rock Paper Scissor"
-    And I should see a button with "Rock"
+    Then I should see a button with "Rock"
+    And I should see a button with "Paper"
+    And I should see a button with "Scissor"

@@ -15,5 +15,4 @@ describe('Rock Paper Scissor basic logic', () => {
     it('if both choices are the same, the game results in a tie', () => {
         expect(game.check(1,1)).to.eq("Tied, try again!")
     })
-
 })
