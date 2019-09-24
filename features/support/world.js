@@ -23,6 +23,27 @@ class RPSWorld {
       const actualString = pageContent.match(expectedString)[0]
       expect(actualString).to.be.eq(expectedString)
   }
+  async clickOnButton(btnName) {
+    const btnSelector = this.btnSelectorFromName(btnName.toLowerCase())
+    await this.page.waitForSelector(btnSelector)
+    await this.page.click(btnSelector)
+  }
+  btnSelectorFromName(btnName) {
+    switch (btnName) {
+      case 'rock':
+        return '#rock'
+        break
+      case 'paper':
+        return '#paper'
+        break
+      case 'paper':
+        return '#scissor'
+        break
+      default: 
+        throw `${btnName} button is not defined.`
+        break
+    }
+  }
 }
 
 setWorldConstructor(RPSWorld)

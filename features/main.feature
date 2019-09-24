@@ -16,6 +16,6 @@ Feature: Play Rock Paper Scissors
 
     Scenario: Playing the game
     Given I visit the site
-    When I click a button "Rock"
+    When I click a button "rock"
     # and the computer chooses scissors
     Then I should have the result "Rock wins"

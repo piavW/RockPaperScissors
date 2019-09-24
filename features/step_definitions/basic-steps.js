@@ -13,11 +13,11 @@ Given("I visit the site", async function() {
     Then("I should see a button {string}", async function(string){
         return await this.pageHasButtonContent(string)
     });
-    When("I click a button {string}", function(string) {
-        pending
+    When("I click a button {string}", async function(string) {
+        return await this.clickOnButton(string)
     })
     Then("I should have the result {string}", function(string) {
-        pending
+        pending //expect(content).to.eql('Rock Wins')
     })
 
   
