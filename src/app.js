@@ -1,12 +1,12 @@
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Game;
 }
-
+function Game() {
+    
 const rock = 0
 const paper = 1
 const scissor = 2
 
-function Game() {
     this.check = (playerChoice, ComputerChoice) => {
         if (playerChoice == ComputerChoice) {
             return "Tied, try again!"

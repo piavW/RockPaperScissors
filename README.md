@@ -7,6 +7,9 @@ Rock vs Paper -> Paper wins
 Rock vs Scissors -> Rock wins
 Paper vs Scissor -> Scissor wins
 
+## Comments
+**regarding the randomization**
+Since the method Math.floor is used to produce random choices of rock/paper/scissor, which is a built in method, there is no need to test it. However I have manually tested that the computers choice does output all available choices in a non specific order when told to give a choice 9 times. 
 
 ## Dependencies
 - JavaScript

@@ -16,13 +16,13 @@ describe('Rock Paper Scissor basic logic', () => {
         expect(game.check(1,1)).to.eq("Tied, try again!")
     })
 
-        describe('Computer enters the game', () => {      
+        describe('Computer enters the game', () => {
             const rock = 0;
             const paper = 1;
             const scissor = 2;
             const computerOptions = [rock, paper, scissor];
-                let randomIndex = Math.floor(Math.random()*3);
-                let computerChoice = computerOptions[randomIndex];
+            let randomIndex = Math.floor(Math.random()*3);
+            let computerChoice = computerOptions[randomIndex];
 
             it('computer can choose rock', () => {
                 let computerChoice = computerOptions[0]
@@ -34,27 +34,5 @@ describe('Rock Paper Scissor basic logic', () => {
                 let playerChoice = paper
                 expect(game.check(computerChoice, playerChoice)).to.eq("Paper wins")
             })  
-        })
-    //WIP from here and below - - - - - - - - - - - - - - - - - - - - - - - - -
-            describe('computer can choose on random', () => {
-            let ComputerChoice = () => {
-                const computerOptions = [rock, paper, scissor]
-                let randomIndex = Math.floor(Math.random()*3);
-                let computerChoice = computerOptions[randomIndex]
-                return computerChoice
-            }
-
-            it('computer can choose at random from an array', () => {
-                let computerChoice = new ComputerChoice()
-                expect(computerChoice).to.eq(rock)
-            }) 
-            it('computer can choose at random from an array', () => {
-                const computerChoice = new ComputerChoice
-                expect(computerChoice).to.eq(paper)
-            }) 
-            it('computer can choose at random from an array', () => {
-                var computerChoice = new ComputerChoice
-                expect(computerChoice).to.eq(scissor)
-            }) 
         })
 })
