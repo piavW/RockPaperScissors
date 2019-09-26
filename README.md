@@ -34,6 +34,8 @@ For feature testing: `$ npm run cucumber`
 ## Inspired by the following sources:
 For [rock-paper-scissor logic](https://stackoverflow.com/questions/11377117/rock-paper-scissors-determine-win-loss-tie-using-math)
 
+For stub random: https://sinonjs.org/releases/v7.5.0/stubs/ &  https://stackoverflow.com/questions/10515000/how-to-test-with-math-random-in-javascript/10516416
+
 ## License
 MIT-license
 

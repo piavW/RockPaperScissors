@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "e2e_training_wheels": "^0.0.36"
+    "e2e_training_wheels": "^0.0.36",
+    "sinon": "^7.5.0"
   },
   "devDependencies": {
     "babel-loader": "^7.1.5",

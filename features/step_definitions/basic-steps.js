@@ -19,7 +19,7 @@ Then("I should see player choice is {string}", async function (string) {
     return await this.pageHasStringContent(string)
 });
 Then("the computer chooses {string}", async function (string){
-   pending //[WIP] return await this.stubComputerChoice(string)
+    return await this.pageHasStringContent(string)
 });
 Then("I should have the result {string}", async function(string) {
     pending 
