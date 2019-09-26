@@ -11,9 +11,10 @@
 <body>
     <header>Header</header>
     <main>
-        <button onclick="playerRock" type="button">Rock</button>
-        <button onclick="playerPaper" type="button" >Paper</button>
-        <button onclick="playerScissor" type="button">Scissors</button>
+        <button id="rock" onclick="getPlayerChoice()" type="button">Rock</button>
+        <button id="paper" onclick="playerPaper" type="button">Paper</button>
+        <button id="scissor" onclick="playerScissor" type="button">Scissors</button>
+        <button id="play" onclick="playGame()">Press to Play the game</button>
     </main>
     <footer>Footer</footer>
   <script src="./dist/bundle.js"></script>

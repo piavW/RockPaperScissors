@@ -1,12 +1,11 @@
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Game;
 }
-function Game() {
-    
 const rock = 0
 const paper = 1
 const scissor = 2
 
+function Game() {
     this.check = (playerChoice, ComputerChoice) => {
         if (playerChoice == ComputerChoice) {
             return "Tied, try again!"
@@ -24,24 +23,29 @@ const scissor = 2
             return "Scissor wins";
         };
     }
-    let getPlayerChoice = () => {
-        if (button.addEventListener("click", playerRock)) {
-            let playerChoice = rock
-            return "player choice is rock"
-        } else if (button.addEventListener("click", playerPaper)) {
-            let playerChoice = paper
-            return "player choice is paper"
-        } else if (button.addEventListener("click", Scissor)) {
-           let playerChoice = scissor
-           return "player choice is scissor"
-        }
-    }
+}
 
-    let ComputerChoice = () => {
-        const computerOptions = [rock, paper, scissor]
-        let randomIndex = Math.floor(Math.random()*3);
-        let computerChoice = computerOptions[randomIndex]
-        return computerChoice
+function playGame() {
+    Game.check(getPlayerChoice(), ComputerChoice)
+}
+
+function ComputerChoice() {
+    const computerOptions = [rock, paper, scissor]
+    let randomIndex = Math.floor(Math.random()*3);
+    let computerChoice = computerOptions[randomIndex]
+    return computerChoice
+}
+
+function getPlayerChoice() {
+    if (document.getElementById("rock")) {
+        playerChoice = rock
+        return `player choice is rock` + `Computers choice is ${computerChoice}`
+    } else if (document.getElementById("paper")) {
+        playerChoice = paper
+        return `player choice is paper` + `Computers choice is ${computerChoice}`
+    } else if (document.getElementById(scissor)) {
+        playerChoice = scissor
+       return `player choice is scissor` + `Computers choice is ${computerChoice}`
     }
 }
 //Rock vs Paper -> Paper wins

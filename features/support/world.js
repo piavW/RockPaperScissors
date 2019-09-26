@@ -23,6 +23,10 @@ class RPSWorld {
       const actualString = pageContent.match(expectedString)[0]
       expect(actualString).to.be.eq(expectedString)
   }
+  async stubComputerChoice(){ //Unsure of this function
+    const actualcomputerChoice = this.stub.ComputerChoice(scissor)
+    expect(actualcomputerChoice).to.be.eq(scissor)
+  }
   async clickOnButton(btnName) {
     const btnSelector = this.btnSelectorFromName(btnName.toLowerCase())
     await this.page.waitForSelector(btnSelector)
