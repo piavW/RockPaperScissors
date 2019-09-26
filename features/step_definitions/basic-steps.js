@@ -15,9 +15,12 @@ Then("I should see a button {string}", async function(string){
 When("I click a button {string}", async function(string) {
     return await this.clickOnButton(string)
 })
-When("The computer chooses {string}", async function (string){
-    return await this.stubComputerChoice(string)
+Then("I should see player choice is {string}", async function (string) {
+    return await this.pageHasStringContent(string) //false positive since rock = 0?
+});
+Then("the computer chooses {string}", async function (string){
+   pending //[WIP] return await this.stubComputerChoice(string)
 })
 Then("I should have the result {string}", async function(string) {
-    pending //return await expect(string).to.eql('Rock Wins')
+    pending 
 })

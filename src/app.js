@@ -37,16 +37,17 @@ function ComputerChoice() {
 }
 
 function getPlayerChoice() {
-    if (document.getElementById("rock")) {
-        playerChoice = rock
-        return `player choice is rock` + `Computers choice is ${computerChoice}`
-    } else if (document.getElementById("paper")) {
-        playerChoice = paper
-        return `player choice is paper` + `Computers choice is ${computerChoice}`
-    } else if (document.getElementById(scissor)) {
-        playerChoice = scissor
-       return `player choice is scissor` + `Computers choice is ${computerChoice}`
+    if (document.getElementById("rock").addEventListener("click", ComputerChoice())) {
+        let playerChoice = rock
+        return playerChoice
+    } else if (document.getElementById("paper").addEventListener("click")) {
+        let playerChoice = paper
+        return playerChoice
+    } else if (document.getElementById("scissor").addEventListener("click")) {
+        let playerChoice = scissor
+        return playerChoice
     }
+    return `player choice is ${playerChoice}` + `Computers choice is ${computerChoice}`
 }
 //Rock vs Paper -> Paper wins
 //Rock vs Scissors -> Rock wins
