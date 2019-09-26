@@ -2,7 +2,7 @@ const { Given, Then, When, After } = require("cucumber");
 
 After(async function() {
     return await this.closeHomePage()
-})
+});
 Given("I visit the site", async function() { 
     return await this.openHomePage()
 });
@@ -14,13 +14,13 @@ Then("I should see a button {string}", async function(string){
 });
 When("I click a button {string}", async function(string) {
     return await this.clickOnButton(string)
-})
+});
 Then("I should see player choice is {string}", async function (string) {
-    return await this.pageHasStringContent(string) //false positive since rock = 0?
+    return await this.pageHasStringContent(string)
 });
 Then("the computer chooses {string}", async function (string){
    pending //[WIP] return await this.stubComputerChoice(string)
-})
+});
 Then("I should have the result {string}", async function(string) {
     pending 
 })

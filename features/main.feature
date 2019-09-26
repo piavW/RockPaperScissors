@@ -16,6 +16,6 @@ Scenario: Visiting the website
 Scenario: Playing the game
   Given I visit the site
   When I click a button "rock"
-  Then I should see player choice is "rock"
+  Then I should see player choice is "paper"
   And the computer chooses "scissors"
   Then I should have the result "Rock wins"
