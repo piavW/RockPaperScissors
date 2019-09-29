@@ -9,19 +9,19 @@ const scissor = 2
 function Game() {
     this.check = (playerChoice, ComputerChoice) => {
         if (playerChoice == ComputerChoice) {
-            return "Tied, try again!"
+            return "Results are: Tied, try again!"
         } else if (playerChoice==1 && ComputerChoice==0) { //paper vs rock
-            return "Paper wins";
+            return "Results are: Paper wins";
         } else if (playerChoice==0 && ComputerChoice==1) { //paper vs rock
-            return "Paper wins";
+            return "Results are: Paper wins";
         } else if (playerChoice==0 && ComputerChoice==2) { //rock vs scissor
-            return "Rock wins";
+            return "Results are: Rock wins";
         } else if (playerChoice==2 && ComputerChoice==0) { //rock vs scissor
-            return "Rock wins";
+            return "Results are: Rock wins";
         } else if (playerChoice==2 && ComputerChoice==1) { //scissor vs paper
-            return "Scissor wins" ;
+            return "Results are: Scissor wins" ;
         } else if (playerChoice==1 && ComputerChoice==2) { //scissor vs paper
-            return "Scissor wins";
+            return "Results are: Scissor wins";
         };
     }
 }
