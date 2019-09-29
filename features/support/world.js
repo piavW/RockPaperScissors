@@ -46,7 +46,6 @@ class RPSWorld {
         break
       case 'play':
         return '#play'
-        break
       default: 
         throw `${btnName} button is not defined.`
         break
