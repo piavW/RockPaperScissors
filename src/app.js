@@ -26,10 +26,6 @@ function Game() {
     }
 }
 
-function playGame() {
-    Game.check(playerChoice, ComputerChoice())
-}
-
 function ComputerChoice() {
     const computerOptions = [rock, paper, scissor]
     let randomIndex = Math.floor(Math.random()*3);
