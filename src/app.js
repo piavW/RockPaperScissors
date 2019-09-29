@@ -2,25 +2,21 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = Game;
 }
 
-const rock = 0
-const paper = 1
-const scissor = 2
-
 function Game() {
     this.check = (playerChoice, ComputerChoice) => {
         if (playerChoice == ComputerChoice) {
             return "Results are: Tied, try again!"
-        } else if (playerChoice==1 && ComputerChoice==0) { //paper vs rock
+        } else if (playerChoice==paper && ComputerChoice==rock) {
             return "Results are: Player wins with Paper";
-        } else if (playerChoice==0 && ComputerChoice==1) { //paper vs rock
+        } else if (playerChoice==rock && ComputerChoice==paper) {
             return "Results are: Computer wins with Paper";
-        } else if (playerChoice==0 && ComputerChoice==2) { //rock vs scissor
+        } else if (playerChoice==rock && ComputerChoice==scissor) {
             return "Results are: Player wins with Rock";
-        } else if (playerChoice==2 && ComputerChoice==0) { //rock vs scissor
+        } else if (playerChoice==scissor && ComputerChoice==rock) {
             return "Results are: Computer wins with Rock";
-        } else if (playerChoice==2 && ComputerChoice==1) { //scissor vs paper
+        } else if (playerChoice==scissor && ComputerChoice==paper) {
             return "Results are: Player wins with Scissor" ;
-        } else if (playerChoice==1 && ComputerChoice==2) { //scissor vs paper
+        } else if (playerChoice==paper && ComputerChoice==scissor) {
             return "Results are: Computer wins with Scissor";
         };
     }
@@ -30,8 +26,16 @@ function ComputerChoice() {
     const computerOptions = [rock, paper, scissor]
     let randomIndex = Math.floor(Math.random()*3);
     let computerChoice = computerOptions[randomIndex]
-    let displayComputer = document.getElementById('computer-choice')
-    displayComputer.innerHTML = `Computer choice is ${computerChoice}`
+    let displayComputer = document.getElementById('display-computer')
+        if (randomIndex == 0){
+            value = "rock"
+        } else if (randomIndex == 1){
+            value = "paper"
+        } else {
+        value = "scissor"
+        }
+        let compString = value
+    displayComputer.innerHTML = `Computer choice is ${compString}`
     return computerChoice
 }
 
