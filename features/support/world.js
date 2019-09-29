@@ -44,8 +44,6 @@ class RPSWorld {
       case 'paper':
         return '#scissor'
         break
-      case 'play':
-        return '#play'
       default: 
         throw `${btnName} button is not defined.`
         break
