@@ -10,29 +10,29 @@ function Game() {
             return "Results are: Player wins with Paper";
         } else if (playerChoice==rock && ComputerChoice==paper) {
             return "Results are: Computer wins with Paper";
-        } else if (playerChoice==rock && ComputerChoice==scissor) {
+        } else if (playerChoice==rock && ComputerChoice==scissors) {
             return "Results are: Player wins with Rock";
-        } else if (playerChoice==scissor && ComputerChoice==rock) {
+        } else if (playerChoice==scissors && ComputerChoice==rock) {
             return "Results are: Computer wins with Rock";
-        } else if (playerChoice==scissor && ComputerChoice==paper) {
-            return "Results are: Player wins with Scissor" ;
-        } else if (playerChoice==paper && ComputerChoice==scissor) {
-            return "Results are: Computer wins with Scissor";
+        } else if (playerChoice==scissors && ComputerChoice==paper) {
+            return "Results are: Player wins with Scissors" ;
+        } else if (playerChoice==paper && ComputerChoice==scissors) {
+            return "Results are: Computer wins with Scissors";
         };
     }
 }
 
 function ComputerChoice() {
-    const computerOptions = [rock, paper, scissor]
+    const computerOptions = [rock, paper, scissors]
     let randomIndex = Math.floor(Math.random()*3);
     let computerChoice = computerOptions[randomIndex]
     let displayComputer = document.getElementById('display-computer')
         if (randomIndex == 0){
-            value = "rock"
+            value = "Rock"
         } else if (randomIndex == 1){
-            value = "paper"
+            value = "Paper"
         } else {
-        value = "scissor"
+        value = "Scissors"
         }
         let compString = value
     displayComputer.innerHTML = `Computer choice is ${compString}`
@@ -55,7 +55,7 @@ function ComputerChoice() {
 })) 
 
 function playerRock() {
-    return `player choice is Rock`
+    return `Player choice is Rock`
 }
 
 (document.addEventListener('DOMContentLoaded', () => {
@@ -74,24 +74,24 @@ function playerRock() {
 })) 
 
 function playerPaper() {
-    return `player choice is Paper`
+    return `Player choice is Paper`
 }
 
 (document.addEventListener('DOMContentLoaded', () => {
-    let button = document.getElementById('scissor')
+    let button = document.getElementById('scissors')
     let displayDiv = document.getElementById('display_answer')
     let displayWin = document.getElementById('display-winner')
     
     button.addEventListener('click', () => {
-        let value = playerScissor()
+        let value = playerScissors()
         displayDiv.innerHTML = value;
-        let playerChoice = scissor
+        let playerChoice = scissors
         let game = new Game
         let result = game.check(playerChoice, ComputerChoice())
         displayWin.innerHTML = result
         })
 })) 
 
-function playerScissor() {
-    return `player choice is Scissor`
+function playerScissors() {
+    return `Player choice is Scissors`
 }
