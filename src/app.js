@@ -11,17 +11,17 @@ function Game() {
         if (playerChoice == ComputerChoice) {
             return "Results are: Tied, try again!"
         } else if (playerChoice==1 && ComputerChoice==0) { //paper vs rock
-            return "Results are: Paper wins";
+            return "Results are: Player wins with Paper";
         } else if (playerChoice==0 && ComputerChoice==1) { //paper vs rock
-            return "Results are: Paper wins";
+            return "Results are: Computer wins with Paper";
         } else if (playerChoice==0 && ComputerChoice==2) { //rock vs scissor
-            return "Results are: Rock wins";
+            return "Results are: Player wins with Rock";
         } else if (playerChoice==2 && ComputerChoice==0) { //rock vs scissor
-            return "Results are: Rock wins";
+            return "Results are: Computer wins with Rock";
         } else if (playerChoice==2 && ComputerChoice==1) { //scissor vs paper
-            return "Results are: Scissor wins" ;
+            return "Results are: Player wins with Scissor" ;
         } else if (playerChoice==1 && ComputerChoice==2) { //scissor vs paper
-            return "Results are: Scissor wins";
+            return "Results are: Computer wins with Scissor";
         };
     }
 }
@@ -30,6 +30,8 @@ function ComputerChoice() {
     const computerOptions = [rock, paper, scissor]
     let randomIndex = Math.floor(Math.random()*3);
     let computerChoice = computerOptions[randomIndex]
+    let displayComputer = document.getElementById('computer-choice')
+    displayComputer.innerHTML = `Computer choice is ${computerChoice}`
     return computerChoice
 }
 
