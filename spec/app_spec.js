@@ -1,5 +1,5 @@
 require('../spec.helper')
-var sinon = require('sinon');
+
 
 describe('Rock Paper Scissor basic logic', () => {
     let game = new Game
@@ -14,11 +14,6 @@ describe('Rock Paper Scissor basic logic', () => {
     })
     it('if both choices are the same, the game results in a tie', () => {
         expect(game.check(1,1)).to.eq("Tied, try again!")
-    })
-    it('computer can randomly choose rock', () => {
-        let stubComp = new ComputerChoice
-        sinon.stub(Math, 'floor').returns(0)
-        expect(stubComp).to.eq(0)//[WIP] How to write this?
     })
     
         describe('Computer enters the game', () => {

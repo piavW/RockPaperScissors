@@ -10,28 +10,29 @@ class RPSWorld {
     this.page = await this.browser.newPage()
     await this.page.goto(HOME_PAGE)
   }
+  
   async closeHomePage() {
     await this.browser.close()
   }
+
   async pageHasStringContent(expectedContent) {
       const pageContent = await this.page.content()
       const actualContent = pageContent.match(expectedContent)[0]
       expect(actualContent).to.be.eq(expectedContent)
   }
+
   async pageHasButtonContent(expectedString){
       const pageContent = await this.page.content()
       const actualString = pageContent.match(expectedString)[0]
       expect(actualString).to.be.eq(expectedString)
   }
-  async stubComputerChoice(){ //Unsure of this function
-    const actualcomputerChoice = this.stub.ComputerChoice(scissor)
-    expect(actualcomputerChoice).to.be.eq(scissor)
-  }
+
   async clickOnButton(btnName) {
     const btnSelector = this.btnSelectorFromName(btnName.toLowerCase())
     await this.page.waitForSelector(btnSelector)
     await this.page.click(btnSelector)
   }
+
   btnSelectorFromName(btnName) {
     switch (btnName) {
       case 'rock':
@@ -42,6 +43,9 @@ class RPSWorld {
         break
       case 'paper':
         return '#scissor'
+        break
+      case 'play':
+        return '#play'
         break
       default: 
         throw `${btnName} button is not defined.`

@@ -26,14 +26,14 @@ function Game() {
 }
 
 function playGame() {
-    Game.check(getPlayerChoice(), ComputerChoice)
+    Game.check(getPlayerChoice(), ComputerChoice())
 }
 
 function ComputerChoice() {
     const computerOptions = [rock, paper, scissor]
     let randomIndex = Math.floor(Math.random()*3);
     let computerChoice = computerOptions[randomIndex]
-    return computerChoice
+    return `the computers chooses ${computerChoice}`
 }
 
 function getPlayerChoice() {
@@ -47,7 +47,7 @@ function getPlayerChoice() {
         let playerChoice = scissor
         return playerChoice
     }
-    return `player choice is ${playerChoice}` + `Computers choice is ${computerChoice}`
+    return `player choice is ${playerChoice}`
 }
 //Rock vs Paper -> Paper wins
 //Rock vs Scissors -> Rock wins
