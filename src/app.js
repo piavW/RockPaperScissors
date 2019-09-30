@@ -46,40 +46,22 @@ let displayDiv = document.getElementById('display_answer')
 let displayWin = document.getElementById('display-winner')
     
 rockButton.addEventListener('click', () => {
-    let value = playerRock()
-    displayDiv.innerHTML = value;
+    displayDiv.innerHTML = `Player choice is Rock`;
     let playerChoice = rock
     let game = new Game
-    let result = game.check(playerChoice, ComputerChoice())
-    displayWin.innerHTML = result
+    displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
 })
 
 paperButton.addEventListener('click', () => {
-    let value = playerPaper()
-    displayDiv.innerHTML = value;
+    displayDiv.innerHTML = `Player choice is Paper`;
     let playerChoice = paper
     let game = new Game
-    let result = game.check(playerChoice, ComputerChoice())
-    displayWin.innerHTML = result
+    displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
 })
 
 scissorsButton.addEventListener('click', () => {
-    let value = playerScissors()
-    displayDiv.innerHTML = value;
+    displayDiv.innerHTML = `Player choice is Scissors`;
     let playerChoice = scissors
     let game = new Game
-    let result = game.check(playerChoice, ComputerChoice())
-    displayWin.innerHTML = result
+    displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
 })
-
-function playerRock() {
-    return `Player choice is Rock`
-}
-
-function playerPaper() {
-    return `Player choice is Paper`
-}
-
-function playerScissors() {
-    return `Player choice is Scissors`
-}
