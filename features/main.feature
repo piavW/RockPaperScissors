@@ -13,8 +13,16 @@ Scenario: Visiting the website
 	And I should see a button "Paper"
 	And I should see a button "Scissor"
 
-Scenario: Playing the game
+Background:
 	Given I visit the site
+
+Scenario: Playing the game
 	When I click on "rock"
 	Then I should see "Player choice is Rock"
 	And I should see "Results are:"
+
+	Scenario: Player can see the score
+	When I click on "rock"
+	Then I should see "Player choice is Rock"
+	And I should see "Results are:"
+	And I should see "Scoreboard"
