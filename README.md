@@ -1,4 +1,6 @@
 # Rock-Paper-Scissors application
+Created by [Pia von Wachenfelt](https://github.com/piavW)
+Deployed at [GitHub Pages](https://piavw.github.io/RockPaperScissors/)
 
 ## What the code does
 The code is supposed to deliver a web-based application where you can play rock-paper-scissors against a computer. Where the computer randomizes it's output. 
