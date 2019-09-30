@@ -1,28 +1,22 @@
 require('../spec.helper')
 
-
 describe('Rock Paper Scissor basic logic', () => {
     let game = new Game
     it('paper beats rock', () => {
-        expect(game.check(1, 0)).to.eq("Paper wins")
+        expect(game.check(paper, rock)).to.eq("Paper wins")
     })
     it('rock beats scissor', () => {
-        expect(game.check(0, 2)).to.eq("Rock wins")
+        expect(game.check(rock, scissors)).to.eq("Rock wins")
     }) 
     it('scissor beats paper', () => {
-        expect(game.check(2, 1)).to.eq("Scissor wins")
+        expect(game.check(scissors, paper)).to.eq("Scissor wins")
     })
     it('if both choices are the same, the game results in a tie', () => {
-        expect(game.check(1,1)).to.eq("Tied, try again!")
+        expect(game.check(paper,paper)).to.eq("Tied, try again!")
     })
     
         describe('Computer enters the game', () => {
-            const rock = 0;
-            const paper = 1;
-            const scissor = 2;
             const computerOptions = [rock, paper, scissor];
-            let randomIndex = Math.floor(Math.random()*3);
-            let computerChoice = computerOptions[randomIndex];
 
             it('computer can choose rock', () => {
                 let computerChoice = computerOptions[0]
