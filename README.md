@@ -29,7 +29,7 @@ Install e2e_training_wheels through [automatic install](https://www.npmjs.com/pa
 Make sure you install the most recent babel-loader `$ npm install --save-dev babel-loader@^7`
 
 ## How to Use tests
-
+Remember to run `$ npm run build` is you change anything in app.js
 For unit testing: `$ npm run specs`
 For feature testing: `$ npm run cucumber`
 

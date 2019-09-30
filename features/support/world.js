@@ -41,7 +41,7 @@ class RPSWorld {
       case 'paper':
         return '#paper'
         break
-      case 'paper':
+      case 'scissor':
         return '#scissor'
         break
       default: 
