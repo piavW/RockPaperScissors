@@ -16,5 +16,5 @@ Scenario: Visiting the website
 Scenario: Playing the game
 	Given I visit the site
 	When I click on "rock"
-	Then I should see "player choice is Rock"
+	Then I should see "Player choice is Rock"
 	And I should see "Results are:"
