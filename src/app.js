@@ -2,24 +2,46 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = Game;
 }
 
+let rockButton = document.getElementById('rock')
+let paperButton = document.getElementById('paper')
+let scissorsButton = document.getElementById('scissors')
+let playerDiv = document.getElementById('display_answer')
+let displayWin = document.getElementById('display-winner')
+let playScoreDiv = document.getElementById("player-score")
+let compScoreDiv = document.getElementById("computer-score")
+
 function Game() {
     this.check = (playerChoice, ComputerChoice) => {
         if (playerChoice == ComputerChoice) {
-            return "Results are: Tied, try again!"
+            return "Tied, try again!"
         } else if (playerChoice==paper && ComputerChoice==rock) {
-            return "Results are: Player wins with Paper";
+            return playPoint()
         } else if (playerChoice==rock && ComputerChoice==paper) {
-            return "Results are: Computer wins with Paper";
+            return compPoint()
         } else if (playerChoice==rock && ComputerChoice==scissors) {
-            return "Results are: Player wins with Rock";
+            return playPoint()
         } else if (playerChoice==scissors && ComputerChoice==rock) {
-            return "Results are: Computer wins with Rock";
+            return compPoint()
         } else if (playerChoice==scissors && ComputerChoice==paper) {
-            return "Results are: Player wins with Scissors" ;
+            return playPoint()
         } else if (playerChoice==paper && ComputerChoice==scissors) {
-            return "Results are: Computer wins with Scissors";
+            return compPoint()
         };
     }
+}
+let playerScore = 0
+let computerScore = 0
+
+function playPoint() {
+    playerScore += 1
+    playScoreDiv.innerHTML = playerScore
+    return displayWin.innerHTML = `Player wins!`
+}
+
+function compPoint() {
+    computerScore += 1
+    compScoreDiv.innerHTML = computerScore
+    return displayWin.innerHTML = `Computer wins!`
 }
 
 function ComputerChoice() {
@@ -32,35 +54,28 @@ function ComputerChoice() {
         } else if (randomIndex == 1){
             value = "Paper"
         } else {
-        value = "Scissors"
+            value = "Scissors"
         }
-        let compString = value
-    displayComputer.innerHTML = `Computer choice is ${compString}`
+    displayComputer.innerHTML = `Computer choice is ${value}`
     return computerChoice
 }
-
-let rockButton = document.getElementById('rock')
-let paperButton = document.getElementById('paper')
-let scissorsButton = document.getElementById('scissors')
-let displayDiv = document.getElementById('display_answer')
-let displayWin = document.getElementById('display-winner')
     
 rockButton.addEventListener('click', () => {
-    displayDiv.innerHTML = `Player choice is Rock`;
+    playerDiv.innerHTML = `Player choice is Rock`;
     let playerChoice = rock
     let game = new Game
     displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
 })
 
 paperButton.addEventListener('click', () => {
-    displayDiv.innerHTML = `Player choice is Paper`;
+    playerDiv.innerHTML = `Player choice is Paper`;
     let playerChoice = paper
     let game = new Game
     displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
 })
 
 scissorsButton.addEventListener('click', () => {
-    displayDiv.innerHTML = `Player choice is Scissors`;
+    playerDiv.innerHTML = `Player choice is Scissors`;
     let playerChoice = scissors
     let game = new Game
     displayWin.innerHTML = game.check(playerChoice, ComputerChoice())

@@ -12,12 +12,23 @@
 <body>
     <header>Rock, Paper, Scissors - the game!</header>
     <main>
-        <button id="rock" type="button">Rock</button>
-        <button id="paper" type="button">Paper</button>
-        <button id="scissors" type="button">Scissors</button>
+      <p>The game is simple: <br>
+          Rock vs Paper -> Paper wins<br>
+          Rock vs Scissors -> Rock wins<br>
+          Paper vs Scissor -> Scissor wins
+      </p>
+          <div>
+            <button id="rock" type="button">Rock</button>
+            <button id="paper" type="button">Paper</button>
+            <button id="scissors" type="button">Scissors</button>
+          </div>
 		<div id="display_answer">Please make your choice</div><br>
 		<div id="display-computer"></div><br>
-		<div id="display-winner"></div>
+    <div id="display-winner"></div><br>
+    <div id="scoreboard">Scoreboard
+      <div>Player vs Computer</div>
+      <span id="player-score">0</span>:<span id="computer-score">0</span>
+    </div>
     </main>
     <footer>Created by <a href="https://github.com/piavW">Pia von Wachenfelt</a></footer>
   <script src="./dist/bundle.js"></script>
