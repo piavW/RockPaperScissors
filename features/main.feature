@@ -14,7 +14,7 @@ Scenario: Visiting the website
 	And I should see a button "Paper"
 	And I should see a button "Scissor"
 
-	Scenario: Player can see the score
+	Scenario: Player can see the result and score
 	When I click on "rock"
 	Then I should see "'Player/Computer wins!'/'Tied, try again!'"
 	And I should see "Scoreboard"

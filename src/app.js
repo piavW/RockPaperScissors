@@ -14,17 +14,9 @@ function Game() {
     this.check = (playerChoice, ComputerChoice) => {
         if (playerChoice == ComputerChoice) {
             return "Tied, try again!"
-        } else if (playerChoice==paper && ComputerChoice==rock) {
+        } else if ((playerChoice==paper && ComputerChoice==rock) || (playerChoice==rock && ComputerChoice==scissors) || (playerChoice==scissors && ComputerChoice==paper)) {
             return playPoint()
-        } else if (playerChoice==rock && ComputerChoice==paper) {
-            return compPoint()
-        } else if (playerChoice==rock && ComputerChoice==scissors) {
-            return playPoint()
-        } else if (playerChoice==scissors && ComputerChoice==rock) {
-            return compPoint()
-        } else if (playerChoice==scissors && ComputerChoice==paper) {
-            return playPoint()
-        } else if (playerChoice==paper && ComputerChoice==scissors) {
+        } else {
             return compPoint()
         };
     }
@@ -33,13 +25,13 @@ let playerScore = 0
 let computerScore = 0
 
 function playPoint() {
-    playerScore += 1
+    playerScore++
     playScoreDiv.innerHTML = playerScore
     return displayWin.innerHTML = `Player wins!`
 }
 
 function compPoint() {
-    computerScore += 1
+    computerScore++
     compScoreDiv.innerHTML = computerScore
     return displayWin.innerHTML = `Computer wins!`
 }
