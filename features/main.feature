@@ -16,8 +16,5 @@ Scenario: Visiting the website
 
 	Scenario: Player can see the score
 	When I click on "rock"
-	Then I should see "Player choice is Rock"
-	And I should see "Results are:"
+	Then I should see "'Player/Computer wins!'/'Tied, try again!'"
 	And I should see "Scoreboard"
-	And I should see "player score:"
-	And I should see "computer score:"
