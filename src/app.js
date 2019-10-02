@@ -5,7 +5,6 @@ let playerDiv = document.getElementById('display_answer')
 let displayWin = document.getElementById('display-winner')
 let playScoreDiv = document.getElementById("player-score")
 let compScoreDiv = document.getElementById("computer-score")
-
 let playerScore = 0
 let computerScore = 0
 
