@@ -2,31 +2,47 @@ require('../spec.helper')
 
 describe('Rock Paper Scissor basic logic', () => {
     let game = new Game
-    it('paper beats rock', () => {
-        expect(game.check(paper, rock)).to.eq("Paper wins")
-    })
-    it('rock beats scissor', () => {
-        expect(game.check(rock, scissors)).to.eq("Rock wins")
-    }) 
-    it('scissor beats paper', () => {
-        expect(game.check(scissors, paper)).to.eq("Scissor wins")
-    })
-    it('if both choices are the same, the game results in a tie', () => {
-        expect(game.check(paper,paper)).to.eq("Tied, try again!")
-    })
-    
-        describe('Computer enters the game', () => {
-            const computerOptions = [rock, paper, scissor];
+let rock = 0
+let paper = 1
+let scissors = 2
+function Game() {
+    this.check = (playerChoice, ComputerChoice) => {
+        if (playerChoice==1 && ComputerChoice==0) {
+            return "User wins";
+        } else if (playerChoice==0 && ComputerChoice==1) {
+            return "Computer wins";
+        } else if (playerChoice==0 && ComputerChoice==2) {
+            return "User wins";
+        } else if (playerChoice==2 && ComputerChoice==0) {
+            return "Computer wins";
+        } else if (playerChoice==2 && ComputerChoice==1) {
+            return "User wins" ;
+        } else if (playerChoice==1 && ComputerChoice==2) {
+            return "Computer wins";
+        } else if (playerChoice == ComputerChoice) {
+            return "Tied, try again"
+        };
+    }
+}
+        it('paper beats rock', () => {
+            let playerChoice = paper
+            let computerChoice = rock
+            expect(game.check(playerChoice, computerChoice)).to.eql("User wins")
+        })
+        it('rock beats scissor', () => {
+            let playerChoice = rock
+            let computerChoice = scissors
+            expect(game.check(playerChoice, computerChoice)).to.eql("User wins")
+        }) 
+        it('scissors beats paper', () => {
+            let playerChoice = paper
+            let computerChoice = scissors
 
-            it('computer can choose rock', () => {
-                let computerChoice = computerOptions[0]
-                expect(computerChoice).to.eq(rock)
-            })
-
-            it('Players paper wins when computer choice = rock and player choice = paper', () => {
-                let computerChoice = rock
-                let playerChoice = paper
-                expect(game.check(computerChoice, playerChoice)).to.eq("Paper wins")
-            })  
+            expect(game.check(playerChoice, computerChoice)).to.eql("Computer wins")
+        })
+        it('if player and computer choice is the same', () => {
+            let playerChoice = paper
+            let computerChoice = paper
+            expect(game.check(playerChoice, computerChoice)).to.eql("Tied, try again")
         })
 })

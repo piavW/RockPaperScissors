@@ -1,7 +1,3 @@
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Game;
-}
-
 let rockButton = document.getElementById('rock')
 let paperButton = document.getElementById('paper')
 let scissorsButton = document.getElementById('scissors')
@@ -10,17 +6,6 @@ let displayWin = document.getElementById('display-winner')
 let playScoreDiv = document.getElementById("player-score")
 let compScoreDiv = document.getElementById("computer-score")
 
-function Game() {
-    this.check = (playerChoice, ComputerChoice) => {
-        if (playerChoice == ComputerChoice) {
-            return "Tied, try again!"
-        } else if ((playerChoice==paper && ComputerChoice==rock) || (playerChoice==rock && ComputerChoice==scissors) || (playerChoice==scissors && ComputerChoice==paper)) {
-            return playPoint()
-        } else {
-            return compPoint()
-        };
-    }
-}
 let playerScore = 0
 let computerScore = 0
 
