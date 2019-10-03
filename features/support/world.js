@@ -10,7 +10,7 @@ class RPSWorld {
     this.page = await this.browser.newPage()
     await this.page.goto(HOME_PAGE)
   }
-  
+
   async closeHomePage() {
     await this.browser.close()
   }
@@ -19,6 +19,12 @@ class RPSWorld {
       const pageContent = await this.page.content()
       const actualContent = pageContent.match(expectedContent)[0]
       expect(actualContent).to.be.eq(expectedContent)
+  }
+
+  async scoreHasScoreContent(expectedScore){
+    const pageContent = await this.page.content()
+    const actualScore = pageContent.match(expectedScore)[0]
+    expect(actualScore).to.be.eq(expectedScore)
   }
 
   async pageHasButtonContent(expectedString){
@@ -41,8 +47,8 @@ class RPSWorld {
       case 'paper':
         return '#paper'
         break
-      case 'paper':
-        return '#scissor'
+      case 'scissors':
+        return '#scissors'
         break
       default: 
         throw `${btnName} button is not defined.`

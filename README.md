@@ -1,4 +1,6 @@
 # Rock-Paper-Scissors application
+Created by [Pia von Wachenfelt](https://github.com/piavW)
+Deployed at [GitHub Pages](https://piavw.github.io/RockPaperScissors/)
 
 ## What the code does
 The code is supposed to deliver a web-based application where you can play rock-paper-scissors against a computer. Where the computer randomizes it's output. 
@@ -27,7 +29,7 @@ Install e2e_training_wheels through [automatic install](https://www.npmjs.com/pa
 Make sure you install the most recent babel-loader `$ npm install --save-dev babel-loader@^7`
 
 ## How to Use tests
-
+Remember to run `$ npm run build` is you change anything in app.js
 For unit testing: `$ npm run specs`
 For feature testing: `$ npm run cucumber`
 

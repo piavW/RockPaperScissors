@@ -1,25 +1,23 @@
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Game;
+let rockButton = document.getElementById('rock')
+let paperButton = document.getElementById('paper')
+let scissorsButton = document.getElementById('scissors')
+let playerDiv = document.getElementById('display_answer')
+let displayWin = document.getElementById('display-winner')
+let playScoreDiv = document.getElementById("player-score")
+let compScoreDiv = document.getElementById("computer-score")
+let playerScore = 0
+let computerScore = 0
+
+function playPoint() {
+    playerScore++
+    playScoreDiv.innerHTML = playerScore
+    return displayWin.innerHTML = `Results are: Player wins!`
 }
 
-function Game() {
-    this.check = (playerChoice, ComputerChoice) => {
-        if (playerChoice == ComputerChoice) {
-            return "Results are: Tied, try again!"
-        } else if (playerChoice==paper && ComputerChoice==rock) {
-            return "Results are: Player wins with Paper";
-        } else if (playerChoice==rock && ComputerChoice==paper) {
-            return "Results are: Computer wins with Paper";
-        } else if (playerChoice==rock && ComputerChoice==scissors) {
-            return "Results are: Player wins with Rock";
-        } else if (playerChoice==scissors && ComputerChoice==rock) {
-            return "Results are: Computer wins with Rock";
-        } else if (playerChoice==scissors && ComputerChoice==paper) {
-            return "Results are: Player wins with Scissors" ;
-        } else if (playerChoice==paper && ComputerChoice==scissors) {
-            return "Results are: Computer wins with Scissors";
-        };
-    }
+function compPoint() {
+    computerScore++
+    compScoreDiv.innerHTML = computerScore
+    return displayWin.innerHTML = `Results are: Computer wins!`
 }
 
 function ComputerChoice() {
@@ -32,66 +30,29 @@ function ComputerChoice() {
         } else if (randomIndex == 1){
             value = "Paper"
         } else {
-        value = "Scissors"
+            value = "Scissors"
         }
-        let compString = value
-    displayComputer.innerHTML = `Computer choice is ${compString}`
+    displayComputer.innerHTML = `Computer choice is ${value}`
     return computerChoice
 }
-
-(document.addEventListener('DOMContentLoaded', () => {
-    let button = document.getElementById('rock')
-    let displayDiv = document.getElementById('display_answer')
-    let displayWin = document.getElementById('display-winner')
     
-    button.addEventListener('click', () => {
-        let value = playerRock()
-        displayDiv.innerHTML = value;
-        let playerChoice = rock
-        let game = new Game
-        let result = game.check(playerChoice, ComputerChoice())
-        displayWin.innerHTML = result
-        })
-})) 
+rockButton.addEventListener('click', () => {
+    playerDiv.innerHTML = `Player choice is Rock`;
+    let playerChoice = rock
+    let game = new Game
+    displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
+})
 
-function playerRock() {
-    return `Player choice is Rock`
-}
+paperButton.addEventListener('click', () => {
+    playerDiv.innerHTML = `Player choice is Paper`;
+    let playerChoice = paper
+    let game = new Game
+    displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
+})
 
-(document.addEventListener('DOMContentLoaded', () => {
-    let button = document.getElementById('paper')
-    let displayDiv = document.getElementById('display_answer')
-    let displayWin = document.getElementById('display-winner')
-    
-    button.addEventListener('click', () => {
-        let value = playerPaper()
-        displayDiv.innerHTML = value;
-        let playerChoice = paper
-        let game = new Game
-        let result = game.check(playerChoice, ComputerChoice())
-        displayWin.innerHTML = result
-        })
-})) 
-
-function playerPaper() {
-    return `Player choice is Paper`
-}
-
-(document.addEventListener('DOMContentLoaded', () => {
-    let button = document.getElementById('scissors')
-    let displayDiv = document.getElementById('display_answer')
-    let displayWin = document.getElementById('display-winner')
-    
-    button.addEventListener('click', () => {
-        let value = playerScissors()
-        displayDiv.innerHTML = value;
-        let playerChoice = scissors
-        let game = new Game
-        let result = game.check(playerChoice, ComputerChoice())
-        displayWin.innerHTML = result
-        })
-})) 
-
-function playerScissors() {
-    return `Player choice is Scissors`
-}
+scissorsButton.addEventListener('click', () => {
+    playerDiv.innerHTML = `Player choice is Scissors`;
+    let playerChoice = scissors
+    let game = new Game
+    displayWin.innerHTML = game.check(playerChoice, ComputerChoice())
+})
