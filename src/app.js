@@ -11,13 +11,13 @@ let computerScore = 0
 function playPoint() {
     playerScore++
     playScoreDiv.innerHTML = playerScore
-    return displayWin.innerHTML = `Player wins!`
+    return displayWin.innerHTML = `Results are: Player wins!`
 }
 
 function compPoint() {
     computerScore++
     compScoreDiv.innerHTML = computerScore
-    return displayWin.innerHTML = `Computer wins!`
+    return displayWin.innerHTML = `Results are: Computer wins!`
 }
 
 function ComputerChoice() {

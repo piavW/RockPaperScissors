@@ -12,6 +12,10 @@ Then("I should see {string}", async function(content) {
     return await this.pageHasStringContent(content)
 });
 
+Then('I should see {string} and {string}', async function (playerScore, computerScore) {
+    return await this.scoreHasScoreContent(playerScore, computerScore)
+});
+
 Then("I should see a button {string}", async function(string){
     return await this.pageHasButtonContent(string)
 });
