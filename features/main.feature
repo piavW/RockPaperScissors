@@ -16,18 +16,18 @@ Feature: Play Rock Paper Scissors
 		And I should see a button "Scissor"
 
 	Scenario: Player can see the result
-		And I should see "Rock Paper Scissor"
+		Then I should see "Rock Paper Scissor"
 		When I click on "rock"
 		Then I should see "Results are:"
 
 	Scenario: Player can see the change in score
-		And I should see "Rock Paper Scissor"
+		Then I should see "Rock Paper Scissor"
 		And I should see "Scoreboard" 
 		And I should see "0" and "0"
 		When I click on "paper"
 		Then I should see "1" and "0"
 
-	Scenario: Player can chose scissors and the result
-		And I should see "Rock Paper Scissor"
+	Scenario: Player can chose scissors and see the result
+		Then I should see "Rock Paper Scissor"
 		When I click on "scissors"
 		Then I should see "Player choice is Scissors"

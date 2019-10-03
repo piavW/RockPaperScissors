@@ -17,7 +17,6 @@ class RPSWorld {
 
   async pageHasStringContent(expectedContent) {
       const pageContent = await this.page.content()
-      // await this.page.waitFor(1000)
       const actualContent = pageContent.match(expectedContent)[0]
       expect(actualContent).to.be.eq(expectedContent)
   }

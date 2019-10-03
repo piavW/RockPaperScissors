@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/styling.css">
-  <title>Rock Paper Scissors</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="./css/styling.css">
+    <title>Rock Paper Scissors</title>
+  </head>
 
-<body>
-    <header>Rock, Paper, Scissors - the game!</header>
-    <main>
-      <p>The game is simple: <br>
-          Rock vs Paper -> Paper wins<br>
-          Rock vs Scissors -> Rock wins<br>
-          Paper vs Scissor -> Scissor wins
-      </p>
+  <body>
+    <h1 class="ui header">Rock, Paper, Scissors<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlYbzfjQvwzZO_83QC3UN6PgUiz5P2ExjERrzXvI15toX0TLOr" class="ui circular image"></h1>
+      <main>
+        <div class="ui raised very padded text container segment" id="gameDiv">
+          <p>The game is simple: <br>
+              Paper beats Rock<br>
+              Rock beats Scissors<br>
+              Scissor beats Paper 
+          </p>
           <div>
-            <button id="rock" type="button">Rock</button>
-            <button id="paper" type="button">Paper</button>
-            <button id="scissors" type="button">Scissors</button>
+            <button id="rock" type="button" class="ui secondary button">Rock</button>
+            <button id="paper" type="button" class="ui secondary button">Paper</button>
+            <button id="scissors" type="button" class="ui secondary button">Scissors</button>
           </div>
-		<div id="display_answer">Please make your choice</div><br>
-		<div id="display-computer"></div><br>
-    <div id="display-winner"></div><br>
-    <div id="scoreboard">Scoreboard
-      <div>Player vs Computer</div>
-      <span id="player-score">0</span>:<span id="computer-score">0</span>
-    </div>
-    </main>
-    <footer>Created by <a href="https://github.com/piavW">Pia von Wachenfelt</a></footer>
-  <script src="./dist/bundle.js"></script>
-  <script src="./src/app.js"></script>
-  <script src="./src/gamelogic.js"></script>
+          <div class="display">
+            <span id="display_answer">Please make your choice</span><br>
+            <span id="display-computer"></span><br>
+            <span id="display-winner"></span><br>
+          </div>
+          <span>
+            <div id="scoreboard" class="ui circular segment">Scoreboard
+              <p>Player</p>
+              <span id="player-score" >0</span>
+            </div>
+            <div id="scoreboard" class="ui circular segment">Scoreboard
+              <p>Computer</p> 
+              <span id="computer-score">0</span>
+            </div>
+          </span>
+      </div>
+      </main>
+  </body>
+  <footer class="ui pointing basic label">
+      Created by <a href="https://github.com/piavW">Pia von Wachenfelt</a>
+  </footer>
+    <script src="./dist/bundle.js"></script>
+    <script src="./src/app.js"></script>
+    <script src="./src/gamelogic.js"></script>
 </html>

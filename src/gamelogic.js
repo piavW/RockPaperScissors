@@ -1,6 +1,3 @@
-// let rock = 0
-// let paper = 1
-// let scissors = 2
 function Game() {
   this.check = (playerChoice, ComputerChoice) => {
       if (playerChoice == ComputerChoice) {
