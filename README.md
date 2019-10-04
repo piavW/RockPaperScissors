@@ -20,15 +20,18 @@ Paper vs Scissor -> Scissor wins
 - Cucumber (for feature testing)
 
 ## SetUp
-Make sure you have npm and node installed, you can check throuh `$ npm -v` and `$ node -v`
+Make sure you have npm and node installed, you can check throuhh `$ npm -v` and `$ node -v`
 Install packages through `$ npm install cucumber chai puppeteer superstatic --save-dev`
-Install e2e_training_wheels through [automatic install](https://www.npmjs.com/package/e2e_training_wheels), when you run `$ npm run test` all test should go green. 
+Install e2e_training_wheels through automatic or manual [install](https://www.npmjs.com/package/e2e_training_wheels) (since we don't wanna use everything use manual, but if you're in a hurry go for automatic). When you run `$ npm run test` all test should go green. 
 Make sure you install the most recent babel-loader `$ npm install --save-dev babel-loader@^7`
 
 ## How to Use tests
 Remember to run `$ npm run build` is you change anything in app.js
 For unit testing: `$ npm run specs`
 For feature testing: `$ npm run cucumber`
+
+## Inspiration
+Pictures from : www.rd.com
 
 ## License
 MIT-license
